@@ -2,6 +2,7 @@
     --primary: #ff0000;
     --bg: #000000;
     --line: #003cff;
+    --white: #ffffff;
   }
   
   * {
@@ -21,6 +22,7 @@
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
+    min-height: 2000px;
   }
 
 
@@ -91,6 +93,121 @@
   #hamburger-menu {
     display: none;
   }
+
+
+/* Hero Section Edit Bacground Gambar Dll */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/gambar1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+.hero ::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(0deg, rgba(1,1,3,1)8%, rgba(255,255,255,0)10%);
+  bottom: 0;
+}
+
+/*edit ukuran tulisan Mau Top Up Tapi Bingung dll*/
+.hero .content{
+  padding: 1.3rem 7%;
+  max-width: 300rem;
+}
+
+/*edit warna dan ukuran tulisan...Mau Top Up Tapi Bingung dll...*/
+.hero .content h1{
+  font-size: 3em;
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+}
+
+/*edit warna dan ukuran tulisan...ALL......*/
+.hero .content h1 span1{
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+  background-color: #000000;
+}
+/*edit warna dan ukuran tulisan...STORE......*/
+.hero .content h1 span2{
+  color: var(--primary);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+  background-color: #000000;
+}
+
+/*edit warna dan ukuran tulisan...Kamu Bisa Top Up Apa Saja Mulai Dari......*/
+.hero .content p{
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-top: 0.5rem;
+  font-weight: 5;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+/*edit tombol beli sekarang*/
+.hero .content .cta{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color:var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
+/*About Section Start Edit*/
+.about {
+  padding: 7rem 7% 1.4rem;
+}
+/*About Section End Edit*/
+
+.about h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.............................*/
+
+
+
+
   
 /* Navbar search form */
 .navbar .search-form {
@@ -128,13 +245,14 @@
 
 
 
-/* Bentuk Layar Laptop */
-@media (max-width: 1366px){
-    html {
-        font-size: 75%;
-    }
-}
 
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
 
 
 
@@ -181,15 +299,11 @@
 }
 
 
-
-
-
-
 }
     
-/* Bentuk Layar HP ppk */
-@media (max-width: 450px){
-    html {
-        font-size: 55%;
-    }
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
