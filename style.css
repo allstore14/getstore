@@ -1,0 +1,309 @@
+:root {
+    --primary: #ff0000;
+    --bg: #000000;
+    --line: #003cff;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+    min-height: 2000px;
+  }
+
+
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #fbff00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+/* Navbar Bagian Rubah Logo*/
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  
+  /* Navbar Bagian Rubah warna tombol home */
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--line);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  /* Navbar Bagian Rubah warna tombol keranjang */
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  /*   PENGATURAN Menu   */
+  #hamburger-menu {
+    display: none;
+  }
+
+
+/* Hero Section Edit Bacground Gambar Dll */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/gambar1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+.hero ::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(0deg, rgba(1,1,3,1)8%, rgba(255,255,255,0)10%);
+  bottom: 0;
+}
+
+/*edit ukuran tulisan Mau Top Up Tapi Bingung dll*/
+.hero .content{
+  padding: 1.3rem 7%;
+  max-width: 300rem;
+}
+
+/*edit warna dan ukuran tulisan...Mau Top Up Tapi Bingung dll...*/
+.hero .content h1{
+  font-size: 3em;
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+}
+
+/*edit warna dan ukuran tulisan...ALL......*/
+.hero .content h1 span1{
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+  background-color: #000000;
+}
+/*edit warna dan ukuran tulisan...STORE......*/
+.hero .content h1 span2{
+  color: var(--primary);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+  background-color: #000000;
+}
+
+/*edit warna dan ukuran tulisan...Kamu Bisa Top Up Apa Saja Mulai Dari......*/
+.hero .content p{
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-top: 0.5rem;
+  font-weight: 5;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+/*edit tombol beli sekarang*/
+.hero .content .cta{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color:var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
+/*About Section Start Edit*/
+.about {
+  padding: 7rem 7% 1.4rem;
+}
+/*About Section End Edit*/
+
+.about h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.............................*/
+
+
+
+
+  
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+
+  .navbar .search-form.active {
+    transform: scaleY(1);
+  }
+  
+  .navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+  }
+  
+  .navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+  }
+
+
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+
+
+
+
+/* Bentuk Layar Tablet */
+@media (max-width: 758px){
+    html {
+        font-size: 62.5%;
+    }
+
+#hamburger-menu {
+    display: inline-block;
+}
+
+.navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #9e9393;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.navbar .navbar-nav.active {
+    right: 0;
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.navbar .navbar-nav a::after{
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after{
+  transform:scaleX(0.2);
+}
+
+
+}
+    
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
