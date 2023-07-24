@@ -1,0 +1,195 @@
+:root {
+    --primary: #ff0000;
+    --bg: #000000;
+    --line: #003cff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+  }
+
+
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #fbff00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+/* Navbar Bagian Rubah Logo*/
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  
+  /* Navbar Bagian Rubah warna tombol home */
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--line);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  /* Navbar Bagian Rubah warna tombol keranjang */
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  /*   PENGATURAN Menu   */
+  #hamburger-menu {
+    display: none;
+  }
+  
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+
+  .navbar .search-form.active {
+    transform: scaleY(1);
+  }
+  
+  .navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+  }
+  
+  .navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+  }
+
+
+
+/* Bentuk Layar Laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+
+
+
+
+
+/* Bentuk Layar Tablet */
+@media (max-width: 758px){
+    html {
+        font-size: 62.5%;
+    }
+
+#hamburger-menu {
+    display: inline-block;
+}
+
+.navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #9e9393;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.navbar .navbar-nav.active {
+    right: 0;
+}
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.navbar .navbar-nav a::after{
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after{
+  transform:scaleX(0.2);
+}
+
+
+
+
+
+
+}
+    
+/* Bentuk Layar HP ppk */
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+}
